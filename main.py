@@ -71,8 +71,8 @@ if __name__=="__main__":
     except KeyboardInterrupt:
         print("Exit")
 
-    time_end = time.time()
-    result_time = int(time_start) - int(time_end)
+        time_end = time.time()
+        result_time = int(time_start) - int(time_end)
 
-    with open("time.txt", "w+") as f:
-        f.write(result_time)
+        with open("time.txt", "w+") as f:
+            f.write(result_time)
