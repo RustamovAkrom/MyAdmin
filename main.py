@@ -6,7 +6,10 @@ from aiogram.client.session.aiohttp import AiohttpSession
 import logging
 import asyncio
 import config
+import time
 
+# start time bot
+time_start = time.time()
 
 session = AiohttpSession(proxy="http://proxy.server:3128")
 bot = Bot(token = config.BOT_TOKEN, session=session)
@@ -67,3 +70,9 @@ if __name__=="__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         print("Exit")
+
+    time_end = time.time()
+    result_time = int(time_start) - int(time_end)
+
+    with open("time.txt", "w+") as f:
+        f.write(result_time)
