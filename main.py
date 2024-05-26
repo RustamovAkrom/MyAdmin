@@ -11,8 +11,8 @@ import time
 # start time bot
 time_start = time.time()
 
-# session = AiohttpSession(proxy="http://proxy.server:3128")
-bot = Bot(token = config.BOT_TOKEN)
+session = AiohttpSession(proxy="http://proxy.server:3128")
+bot = Bot(token = config.BOT_TOKEN, session=session)
 dp = Dispatcher()
 
 
