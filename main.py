@@ -2,14 +2,14 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
-# from aiogram.client.session.aiohttp import AiohttpSession
+from aiogram.client.session.aiohttp import AiohttpSession
 import logging
 import asyncio
 import config
 
 
-# session = AiohttpSession(proxy="http://proxy.server:3128")
-bot = Bot(token = config.BOT_TOKEN)
+session = AiohttpSession(proxy="http://proxy.server:3128")
+bot = Bot(token = config.BOT_TOKEN, session=session)
 dp = Dispatcher()
 
 
