@@ -17,7 +17,7 @@ SEND_GROUP_TEXT = lambda first_name, last_name, username, user_message: f"""
 FROM: 
 { first_name }
 { last_name }
-https://t.me/{ username }
+https:/t.me/{ username }
 
 MESSAGE: 
 { user_message }
