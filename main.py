@@ -49,7 +49,7 @@ async def sending_on_group(message: types.Message, state: FSMContext):
     await bot.send_message(config.GROUP_ID, config.SEND_GROUP_TEXT(
         message.from_user.first_name,
         message.from_user.last_name,
-        f"https:/t.me/{message.from_user.username}",
+        message.from_user.username,
         message.text
     ))
     await state.clear()
