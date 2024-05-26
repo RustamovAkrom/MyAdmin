@@ -11,8 +11,8 @@ import time
 # start time bot
 time_start = time.time()
 
-session = AiohttpSession(proxy="http://proxy.server:3128")
-bot = Bot(token = config.BOT_TOKEN, session=session)
+# session = AiohttpSession(proxy="http://proxy.server:3128")
+bot = Bot(token = config.BOT_TOKEN)
 dp = Dispatcher()
 
 
@@ -72,7 +72,7 @@ if __name__=="__main__":
         print("Exit")
 
         time_end = time.time()
-        result_time = int(time_start) - int(time_end)
+        result_time = int(time_end) - int(time_start)
 
-        with open("time.txt", "w+") as f:
-            f.write(result_time)
+        with open("time.txt", "w") as f:
+            f.write(f"bot working time: {str(result_time)} secund")
